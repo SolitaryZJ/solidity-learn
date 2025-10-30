@@ -32,7 +32,7 @@ contract Bank is IBank {
 contract BankUser {
     function depositToBank(address bankAddress) external payable {
         IBank bank = IBank(bankAddress);
-        bank.deposit{value: msg.value}();
+        bank.deposit{value: msg.value-1}();
     }
 
     function withdrawFromBank(address bankAddress, uint256 amount) external {
