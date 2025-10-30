@@ -51,7 +51,7 @@ contract ABI {
         );
     }
     // 8.椭圆曲线回复公钥（errecover）
-    function errecoverAddress(bytes32 hash, uint256 v, uint256 r, uint256 s) public pure returns(address) {
+    function errecoverAddress(bytes32 hash, uint8 v, bytes32 r, bytes32 s) public pure returns(address) {
         return ecrecover(hash, v, r, s);
     }
 }
