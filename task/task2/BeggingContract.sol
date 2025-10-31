@@ -3,7 +3,6 @@ pragma solidity ^0.8.20;
 
 contract BeggingContract{
     address private _owner;
-    uint256 public minDonation = 0.001 ether;
     uint256 public totalDonation;
     mapping(address donator => uint256 amout) public donations;
     event DonationReceived(address indexed donator, uint256 amount);
