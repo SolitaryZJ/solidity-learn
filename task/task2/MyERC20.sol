@@ -5,6 +5,7 @@ contract MyERC20{
 
     mapping(address account => uint256 amount) private _balances;
     mapping(address account => mapping(address spender => uint256)) private _allowances;
+
     event Transfer(address indexed from, address indexed to, uint256 value);
     event Approval(address indexed owner, address indexed spender, uint256 value);
 
